@@ -1,0 +1,14 @@
+tornado
+pylibmc
+motor
+toro
+schematics
+psycopg2
+queries
+pyzmq
+arrow
+phonenumbers
+requests
+pycurl
+nose
+ujson
