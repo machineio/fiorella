@@ -182,6 +182,8 @@ class Handler(contacts.Contacts, BaseHandler):
 
         http_client.fetch(url, handle_request, method='POST', body=json.dumps(struct))
 
+        logging.info('tons... lo enviaste o que?')
+
         self.set_status(201)
         self.finish({'status':'acknowledge'})
         
