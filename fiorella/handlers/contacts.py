@@ -14,8 +14,11 @@ __author__ = 'Jean Chassoul'
 import ujson as json
 import motor
 
+import urllib
+
 from tornado import gen
 from tornado import web
+from tornado import httpclient
 
 import logging
 
@@ -163,7 +166,21 @@ class Handler(contacts.Contacts, BaseHandler):
 
         logging.info(struct)
 
-        logging.warning('see if we receive stuff from external party')
+        httpclient.AsyncHTTPClient.configure('tornado.curl_httpclient.CurlAsyncHTTPClient')
+        http_client = httpclient.AsyncHTTPClient()
+
+        url = 'http://fun.codemachine.io/contacts/'
+
+        struct['account'] = 'fiorella'
+
+        def handle_request(response):
+            if response.error:
+                logging.error(response.error)
+            else:
+                logging.info('ok %s' % str(response.body))
+
+
+        http_client.fetch(url, handle_request, method='POST', body=json.dumps(struct))
 
         self.set_status(201)
         self.finish({'status':'acknowledge'})
