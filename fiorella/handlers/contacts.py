@@ -145,8 +145,6 @@ class Handler(contacts.Contacts, BaseHandler):
         # post structure
         #struct = yield check_json(self.request.body)
 
-        struct = self.request.arguments
-
         #logging.error(struct)
 
         # format_pass = (True if struct else False)
@@ -161,8 +159,11 @@ class Handler(contacts.Contacts, BaseHandler):
         # request query arguments
         query_args = self.request.arguments
 
+        struct = {k.lower(): query_args[k][0] for k in query_args}
 
         logging.info(struct)
+
+        logging.warning('see if we receive stuff from external party')
 
         self.set_status(201)
         self.finish({'status':'acknowledge'})
