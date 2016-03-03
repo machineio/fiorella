@@ -145,9 +145,9 @@ class Handler(contacts.Contacts, BaseHandler):
         # post structure
         #struct = yield check_json(self.request.body)
 
-        struct = self.request.body
+        struct = self.request.arguments
 
-        logging.error(struct)
+        #logging.error(struct)
 
         # format_pass = (True if struct else False)
         # if not format_pass:
@@ -158,14 +158,11 @@ class Handler(contacts.Contacts, BaseHandler):
         # settings database
         db = self.settings.get('db')
 
-        # logging new contact structure
-        # logging.info('new contact structure {0}'.format(str(struct)))
-
-        # logging request query arguments
-        logging.info(self.request.arguments)
-
         # request query arguments
         query_args = self.request.arguments
+
+
+        logging.info(struct)
 
         self.set_status(201)
         self.finish({'status':'acknowledge'})
