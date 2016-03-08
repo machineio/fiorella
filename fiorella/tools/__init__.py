@@ -28,6 +28,19 @@ import zmq
 from zmq.log.handlers import PUBHandler
 
 
+def get_average(total, marks):
+    '''
+        Get average from signals
+    '''
+    return float(total) / len(marks)
+
+def get_percentage(shit, stuff):
+    '''
+        Get percentage of shit and stuff.
+
+    '''
+    return "{:.0%}".format(shit/stuff)
+
 @gen.coroutine
 def check_json(struct):
     '''
