@@ -172,6 +172,10 @@ class Handler(contacts.Contacts, BaseHandler):
         url = 'http://iofun.io/contacts/'
         struct['contact_info_lead_source'] = 'Boberdoo'
 
+        if struct['partner']:
+            struct['contact_info_partner'] = struct['partner']
+            del struct['partner']
+
         struct['account'] = 'fiorella'
 
         def handle_request(response):
