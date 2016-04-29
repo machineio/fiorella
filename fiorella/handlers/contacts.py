@@ -188,6 +188,13 @@ class Handler(contacts.Contacts, BaseHandler):
             struct['contact_info_city'] = struct['city']
             del struct['city']
 
+        if struct['number_of_children']:
+            struct['contact_info_number_of_children'] = struct['number_of_children']
+            del struct['number_of_children']
+
+
+        
+
 
         logging.info('info en donde?');
 
