@@ -169,7 +169,8 @@ class Handler(contacts.Contacts, BaseHandler):
         httpclient.AsyncHTTPClient.configure('tornado.curl_httpclient.CurlAsyncHTTPClient')
         http_client = httpclient.AsyncHTTPClient()
 
-        url = 'http://fun.codemachine.io/contacts/'
+        url = 'http://iofun.io/contacts/'
+        struct['contact_info_lead_source'] = 'Boberdoo'
 
         struct['account'] = 'fiorella'
 
