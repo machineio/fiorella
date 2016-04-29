@@ -192,9 +192,9 @@ class Handler(contacts.Contacts, BaseHandler):
             struct['contact_info_number_of_children'] = struct['number_of_children']
             del struct['number_of_children']
 
-
-        
-
+        if struct['marital_status']:
+            struct['contact_info_marital_status'] = struct['marital_status']
+            del struct['marital_status']
 
         logging.info('info en donde?');
 
