@@ -189,6 +189,11 @@ class Handler(contacts.Contacts, BaseHandler):
             del struct['city']
 
 
+        logging.info('info en donde?');
+
+        logging.warning(struct);
+
+
         struct['account'] = 'fiorella'
 
         def handle_request(response):
