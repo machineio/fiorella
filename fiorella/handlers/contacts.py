@@ -176,6 +176,19 @@ class Handler(contacts.Contacts, BaseHandler):
             struct['contact_info_partner'] = struct['partner']
             del struct['partner']
 
+        if struct['last_name']:
+            struct['contact_info_last_name'] = struct['last_name']
+            del struct['last_name']
+
+        if struct['first_name']:
+            struct['contact_info_first_name'] = struct['first_name']
+            del struct['first_name']            
+
+        if struct['city']:
+            struct['contact_info_city'] = struct['city']
+            del struct['city']
+
+
         struct['account'] = 'fiorella'
 
         def handle_request(response):
