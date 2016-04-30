@@ -170,7 +170,7 @@ class Handler(contacts.Contacts, BaseHandler):
         http_client = httpclient.AsyncHTTPClient()
 
         url = 'http://iofun.io/contacts/'
-        struct['contact_info_lead_source'] = 'Boberdoo'
+        struct['contact_info_lead_source'] = 'boberdoo'
 
         if struct['partner']:
             struct['contact_info_partner'] = struct['partner']
@@ -196,7 +196,7 @@ class Handler(contacts.Contacts, BaseHandler):
             struct['contact_info_marital_status'] = struct['marital_status']
             del struct['marital_status']
 
-        logging.info('info en donde?');
+        logging.info('info satan en donde?');
 
         logging.warning(struct);
 
