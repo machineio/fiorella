@@ -18,7 +18,7 @@ def ensure_indexes(db):
     db.outbound.ensure_index([('uuid', 1)], unique=True)
     # contacts indexes
     db.contacts.ensure_index([('uuid', 1)], unique=True)
-    db.contacts.ensure_index([('account', 1), ('phone_number', 1)], unique=True)
+    #db.contacts.ensure_index([('account', 1), ('phone_number', 1)], unique=True)
     # directories indexes
     db.directories.ensure_index([('uuid', 1)], unique=True)
     db.directories.ensure_index([('resources.contacts.contains', 1)])
