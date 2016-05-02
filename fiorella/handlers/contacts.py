@@ -246,22 +246,9 @@ class Handler(contacts.Contacts, BaseHandler):
             struct['contact_info_child_4_gender'] = struct['child_4_gender']
             del struct['child_4_gender']
 
-
-        if struct['spouse_1_gender']:
-            struct['contact_info_spouse_1_gender'] = struct['spouse_1_gender']
+        if struct['spouse_gender']:
+            struct['spouse_gender'] = struct['spouse_1_gender']
             del struct['spouse_1_gender']
-
-        if struct['spouse_dob']:
-            struct['contact_info_spouse_dob'] = struct['spouse_dob']
-            del struct['spouse_dob']
-
-        if struct['spouse_first_name']:
-            struct['contact_info_spouse_first_name'] = struct['spouse_first_name']
-            del struct['spouse_first_name']
-
-        if struct['spouse_last_name']:
-            struct['contact_info_spouse_last_name'] = struct['spouse_last_name']
-            del struct['spouse_last_name']
 
 
         if struct['priority_code']:
@@ -281,10 +268,8 @@ class Handler(contacts.Contacts, BaseHandler):
             del struct['mobile_number']
 
         
-        
 
-
-        logging.info('info satan en donde?');
+        logging.info('info satan en donde? lol!');
 
         logging.warning(struct);
 
