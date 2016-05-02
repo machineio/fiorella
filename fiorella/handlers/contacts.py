@@ -229,7 +229,7 @@ class Handler(contacts.Contacts, BaseHandler):
 
         if 'child_4_first_name' in struct.keys():
             struct['contact_info_child_4_first_name'] = struct['child_4_first_name']
-            del struct['child_4_last_name']
+            del struct['child_4_first_name']
 
         if 'child_2_first_name' in struct.keys():
             struct['contact_info_child_2_first_name'] = struct['child_2_first_name']
