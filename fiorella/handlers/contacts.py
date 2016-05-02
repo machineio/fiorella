@@ -172,102 +172,98 @@ class Handler(contacts.Contacts, BaseHandler):
         url = 'http://iofun.io/contacts/'
         struct['contact_info_lead_source'] = 'boberdoo'
 
-        if struct['partner']:
+        if struct.get('partner', None):
             struct['contact_info_partner'] = struct['partner']
             del struct['partner']
 
-        if struct['last_name']:
+        if struct.get('last_name', None):
             struct['contact_info_last_name'] = struct['last_name']
             del struct['last_name']
 
-        if struct['first_name']:
+        if struct.get('first_name', None):
             struct['contact_info_first_name'] = struct['first_name']
             del struct['first_name']            
 
-        if struct['city']:
+        if struct.get('city', None):
             struct['contact_info_city'] = struct['city']
             del struct['city']
 
-        if struct['number_of_children']:
+        if struct.get('number_of_children', None):
             struct['contact_info_number_of_children'] = struct['number_of_children']
             del struct['number_of_children']
 
-        if struct['marital_status']:
+        if struct.get('marital_status', None):
             struct['contact_info_marital_status'] = struct['marital_status']
             del struct['marital_status']
 
-        if struct['child_1_dob']:
+        if struct.get('child_1_dob', None):
             struct['contact_info_child_1_dob'] = struct['child_1_dob']
             del struct['child_1_dob']
 
-        if struct['child_1_last_name']:
+        if struct.get('child_1_last_name', None):
             struct['contact_info_child_1_last_name'] = struct['child_1_last_name']
             del struct['child_1_last_name']
 
-        if struct['child_1_first_name']:
+        if struct.get('child_1_first_name', None):
             struct['contact_info_child_1_first_name'] = struct['child_1_first_name']
             del struct['child_1_first_name']
 
-        if struct['child_1_gender']:
+        if struct.get('child_1_gender', None):
             struct['contact_info_child_1_gender'] = struct['child_1_gender']
             del struct['child_1_gender']
 
-        
-        if struct['child_2_dob']:
+        if struct.get('child_2_dob', None):
             struct['contact_info_child_2_dob'] = struct['child_2_dob']
             del struct['child_2_dob']
 
-        if struct['child_2_last_name']:
+        if struct.get('child_2_last_name', None):
             struct['contact_info_child_2_last_name'] = struct['child_2_last_name']
             del struct['child_2_last_name']
 
-        if struct['child_2_first_name']:
+        if struct.get('child_2_first_name', None):
             struct['contact_info_child_2_first_name'] = struct['child_2_first_name']
             del struct['child_2_first_name']
 
-        if struct['child_2_gender']:
+        if struct.get('child_2_gender', None):
             struct['contact_info_child_2_gender'] = struct['child_2_gender']
             del struct['child_2_gender']
 
-
-        if struct['child_3_dob']:
+        if struct.get('child_3_dob', None):
             struct['contact_info_child_3_dob'] = struct['child_3_dob']
             del struct['child_3_dob']
 
-        if struct['child_3_last_name']:
+        if struct.get('child_3_last_name', None):
             struct['contact_info_child_3_last_name'] = struct['child_3_last_name']
             del struct['child_3_last_name']
 
-        if struct['child_3_first_name']:
+        if struct.get('child_3_first_name', None):
             struct['contact_info_child_3_first_name'] = struct['child_3_first_name']
             del struct['child_3_first_name']
 
-        if struct['child_4_gender']:
+        if struct.get('child_4_gender', None):
             struct['contact_info_child_4_gender'] = struct['child_4_gender']
             del struct['child_4_gender']
 
-        if struct['spouse_gender']:
+        if struct.get('spouse_gender', None):
             struct['spouse_gender'] = struct['spouse_1_gender']
             del struct['spouse_1_gender']
 
-
-        if struct['priority_code']:
+        if struct.get('priority_code', None):
             struct['health_priority_code'] = struct['priority_code']
             del struct['priority_code']
 
-        if struct['email']:
+        if struct.get('email', None):
             struct['contact_info_email'] = struct['email']
             del struct['email']
 
-        if struct['gender']:
+        if struct.get('gender', None):
             struct['contact_info_gender'] = struct['gender']
             del struct['gender']
 
-        if struct['mobile_number']:
+        if struct.get('mobile_number', None):
             struct['other_phone'] = struct['mobile_number']
             del struct['mobile_number']
 
-        
 
         logging.info('info satan en donde? lol!');
 
