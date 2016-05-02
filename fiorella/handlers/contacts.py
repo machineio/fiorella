@@ -204,45 +204,48 @@ class Handler(contacts.Contacts, BaseHandler):
             struct['contact_info_child_1_last_name'] = struct['child_1_last_name']
             del struct['child_1_last_name']
 
+        if struct['child_1_first_name']:
+            struct['contact_info_child_1_first_name'] = struct['child_1_first_name']
+            del struct['child_1_first_name']
+
         if struct['child_1_gender']:
             struct['contact_info_child_1_gender'] = struct['child_1_gender']
             del struct['child_1_gender']
 
+        
         if struct['child_2_dob']:
-            struct['contact_info_child_1_dob'] = struct['child_2_dob']
+            struct['contact_info_child_2_dob'] = struct['child_2_dob']
             del struct['child_2_dob']
 
         if struct['child_2_last_name']:
-            struct['contact_info_child_1_last_name'] = struct['child_2_last_name']
+            struct['contact_info_child_2_last_name'] = struct['child_2_last_name']
             del struct['child_2_last_name']
 
+        if struct['child_2_first_name']:
+            struct['contact_info_child_2_first_name'] = struct['child_2_first_name']
+            del struct['child_2_first_name']
+
         if struct['child_2_gender']:
-            struct['contact_info_child_1_gender'] = struct['child_2_gender']
+            struct['contact_info_child_2_gender'] = struct['child_2_gender']
             del struct['child_2_gender']
 
+
         if struct['child_3_dob']:
-            struct['contact_info_child_1_dob'] = struct['child_3_dob']
+            struct['contact_info_child_3_dob'] = struct['child_3_dob']
             del struct['child_3_dob']
 
         if struct['child_3_last_name']:
-            struct['contact_info_child_1_last_name'] = struct['child_3_last_name']
+            struct['contact_info_child_3_last_name'] = struct['child_3_last_name']
             del struct['child_3_last_name']
 
-        if struct['child_3_gender']:
-            struct['contact_info_child_1_gender'] = struct['child_3_gender']
-            del struct['child_3_gender']
-
-        if struct['child_4_dob']:
-            struct['contact_info_child_1_dob'] = struct['child_4_dob']
-            del struct['child_4_dob']
-
-        if struct['child_4_last_name']:
-            struct['contact_info_child_1_last_name'] = struct['child_4_last_name']
-            del struct['child_4_last_name']
+        if struct['child_3_first_name']:
+            struct['contact_info_child_3_first_name'] = struct['child_3_first_name']
+            del struct['child_3_first_name']
 
         if struct['child_4_gender']:
-            struct['contact_info_child_1_gender'] = struct['child_4_gender']
+            struct['contact_info_child_4_gender'] = struct['child_4_gender']
             del struct['child_4_gender']
+
 
         if struct['spouse_1_gender']:
             struct['contact_info_spouse_1_gender'] = struct['spouse_1_gender']
