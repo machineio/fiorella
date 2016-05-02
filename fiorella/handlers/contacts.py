@@ -223,6 +223,14 @@ class Handler(contacts.Contacts, BaseHandler):
             struct['contact_info_child_2_last_name'] = struct['child_2_last_name']
             del struct['child_2_last_name']
 
+        if 'child_4_last_name' in struct.keys():
+            struct['contact_info_child_4_last_name'] = struct['child_4_last_name']
+            del struct['child_4_last_name']
+
+        if 'child_4_first_name' in struct.keys():
+            struct['contact_info_child_4_first_name'] = struct['child_4_first_name']
+            del struct['child_4_last_name']
+
         if 'child_2_first_name' in struct.keys():
             struct['contact_info_child_2_first_name'] = struct['child_2_first_name']
             del struct['child_2_first_name']
@@ -266,6 +274,10 @@ class Handler(contacts.Contacts, BaseHandler):
         if 'mobile_number' in struct.keys():
             struct['other_phone'] = struct['mobile_number']
             del struct['mobile_number']
+
+        if 'street_address' in struct.keys():
+            struct['contact_info_property_address'] = struct['street_address']
+            del struct['street_address']
 
 
         logging.info('info satan en donde? lol!');
