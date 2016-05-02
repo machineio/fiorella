@@ -255,7 +255,7 @@ class Handler(contacts.Contacts, BaseHandler):
             struct['contact_info_child_4_gender'] = struct['child_4_gender']
             del struct['child_4_gender']
 
-        if 'spouse_gender' in struct.keys():
+        if 'spouse_1_gender' in struct.keys():
             struct['spouse_gender'] = struct['spouse_1_gender']
             del struct['spouse_1_gender']
 
