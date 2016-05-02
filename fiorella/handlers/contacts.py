@@ -279,13 +279,14 @@ class Handler(contacts.Contacts, BaseHandler):
             struct['contact_info_property_address'] = struct['street_address']
             del struct['street_address']
 
+        struct['health_lead_status'] = 'New'
+        struct['account'] = 'fiorella'
 
         logging.info('info satan en donde? lol!');
 
         logging.warning(struct);
 
-
-        struct['account'] = 'fiorella'
+        
 
         def handle_request(response):
             if response.error:
