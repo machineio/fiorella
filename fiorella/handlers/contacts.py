@@ -255,6 +255,15 @@ class Handler(contacts.Contacts, BaseHandler):
             struct['health_priority_code'] = struct['priority_code']
             del struct['priority_code']
 
+        if struct['email']:
+            struct['contact_info_email'] = struct['email']
+            del struct['email']
+
+        if struct['gender']:
+            struct['contact_info_gender'] = struct['gender']
+            del struct['gender']
+
+        
         
 
 
