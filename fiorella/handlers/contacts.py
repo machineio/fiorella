@@ -251,6 +251,19 @@ class Handler(contacts.Contacts, BaseHandler):
             struct['contact_info_spouse_1_gender'] = struct['spouse_1_gender']
             del struct['spouse_1_gender']
 
+        if struct['spouse_dob']:
+            struct['contact_info_spouse_dob'] = struct['spouse_dob']
+            del struct['spouse_dob']
+
+        if struct['spouse_first_name']:
+            struct['contact_info_spouse_first_name'] = struct['spouse_first_name']
+            del struct['spouse_first_name']
+
+        if struct['spouse_last_name']:
+            struct['contact_info_spouse_last_name'] = struct['spouse_last_name']
+            del struct['spouse_last_name']
+
+
         if struct['priority_code']:
             struct['health_priority_code'] = struct['priority_code']
             del struct['priority_code']
@@ -262,6 +275,10 @@ class Handler(contacts.Contacts, BaseHandler):
         if struct['gender']:
             struct['contact_info_gender'] = struct['gender']
             del struct['gender']
+
+        if struct['mobile_number']:
+            struct['other_phone'] = struct['mobile_number']
+            del struct['mobile_number']
 
         
         
