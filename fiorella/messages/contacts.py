@@ -76,6 +76,7 @@ class Contact(models.Model):
     federal_do_not_call = types.StringType()
     do_you_own_your_home = types.StringType()
     renew_as_is_email_received = types.StringType()
+    dwelling_occupancy = types.StringType()
     language_preference = types.StringType()
     social_security_number = types.StringType()
     us_citizen_or_legal_permanent_resident = types.StringType()
